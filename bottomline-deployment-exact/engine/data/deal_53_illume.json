@@ -1,0 +1,14 @@
+{
+  "deal": "Fifth Third — Illume Ag",
+  "client": "Illume Ag",
+  "analysisDate": "2025-11-07",
+  "pricingTypes": "Card, Premium, Basic, B2C, Check Print",
+
+  "_source": "Values read from POC Deals/53/Bottomline_Internal_Illume Ag_2025_11_07.xlsx, sheet 'Variables Internal'. The numbered 8_ file carries the same converted data but was left with template placeholders in its header fields.",
+
+  "_vhfOverrides": "Reviewer decisions applied to the vendor hit file after the reviewed pricing output is pasted in. None have been derived for this deal yet — deriving them requires diffing a generated workbook against the delivered one, as was done for JPM.",
+  "vhfOverrides": [],
+
+  "_bookingAssumptions": "Per-deal enrollment-rate assumptions the pricing analyst sets by hand on the hidden 'Booking Calc' tab. Not yet derived for this deal; leaving this empty means the workbook keeps whatever the template carries rather than having invented rates written into it.",
+  "bookingAssumptions": []
+}

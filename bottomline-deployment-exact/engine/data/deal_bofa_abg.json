@@ -1,0 +1,25 @@
+{
+  "deal": "Bank of America — Authentic Brands Group",
+  "client": "Authentic Brands Group LLC",
+  "analysisDate": "2026-05-22",
+  "pricingTypes": "Card, Premium, Basic, B2C, Check Print",
+
+  "_source": "Values read from POC Deals/BOA/8_Bottomline_Internal_Value Statement_Authentic Brands Group_2026_05_22_CompPay.xlsx, sheet 'BofA Data Converted'.",
+
+  "_scenarios": "The bank priced this deal two ways. Files 8 and 9 each exist in a CompPay (comprehensive payables, includes virtual card) and a PM Only (Paymode Connect, no card) variant. The converted tab is identical in both; they diverge in the card program. The workspace exposes this as a scenario switch.",
+
+  "_paymentTypeMap": "BofA sends its own payment-type codes rather than the model's vocabulary. This map was read back out of the delivered workbook (VHF column E vs column AK), not invented: ACH 1160, SWIFT 168, INT 118, PAID_MAN 41, D_WIRE 29.",
+  "paymentTypeMap": {
+    "ACH": "ACH",
+    "PAID_MAN": "ACH",
+    "SWIFT": "Wire",
+    "INT": "Wire",
+    "D_WIRE": "Wire"
+  },
+
+  "_vhfOverrides": "Reviewer decisions applied to the vendor hit file after the reviewed pricing output is pasted in. None have been derived for this deal yet — deriving them requires diffing a generated workbook against the delivered one, as was done for JPM.",
+  "vhfOverrides": [],
+
+  "_bookingAssumptions": "Per-deal enrollment-rate assumptions the pricing analyst sets by hand on the hidden 'Booking Calc' tab. Not yet derived for this deal; leaving this empty means the workbook keeps whatever the template carries rather than having invented rates written into it.",
+  "bookingAssumptions": []
+}

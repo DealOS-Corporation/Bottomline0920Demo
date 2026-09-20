@@ -1,0 +1,31 @@
+{
+  "deal": "JPM — Denton County Electric Cooperative",
+  "client": "Denton County Electric Cooperative",
+  "analysisDate": "2026-01-16",
+  "pricingTypes": "Premium, Basic, Card, Check Print",
+
+  "_vhfOverrides": "Reviewer decisions applied to the vendor hit file after the reviewed pricing output is pasted in.",
+  "vhfOverrides": [
+    {
+      "cell": "AG56",
+      "field": "Strategic Vendors",
+      "value": "no",
+      "reason": "Reviewer cleared the strategic-vendor flag before release; the reviewed pricing output still carried Yes."
+    }
+  ],
+
+  "_bookingAssumptions": "Per-deal enrollment-rate assumptions the pricing analyst sets by hand on the hidden 'Booking Calc' tab. These are constants in the workbook, not formulas.",
+  "bookingAssumptions": [
+    { "cell": "J56", "value": 1.0474080832060446 },
+    { "cell": "L56", "value": 0.7738185412283216 },
+    { "cell": "M56", "value": 0.8689396333254714 },
+    { "cell": "J72", "value": 0.9682344219750613 },
+    { "cell": "L72", "value": 0.954979434622529 },
+    { "cell": "J87", "value": 0.7472189845240287 },
+    { "cell": "L87", "value": 0.8102384111062596 },
+    { "cell": "J88", "value": 0.7472189845240287 },
+    { "cell": "L88", "value": 0.8102384111062596 },
+    { "cell": "J91", "value": 0.7472189845240287 },
+    { "cell": "L91", "value": 0.8102384111062596 }
+  ]
+}

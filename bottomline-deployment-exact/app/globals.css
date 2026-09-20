@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f6f7f9;
+  --foreground: #1a2333;
+  --accent: #1d4ed8;
+  --accent-light: #eff6ff;
+  --surface: #ffffff;
+  --surface-hover: #f8fafc;
+  --border: #e2e8f0;
+  --border-subtle: #eef1f5;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular figures for numeric data displays */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ── Legacy utility names, flattened to professional defaults ── */
+.glass {
+  background: #ffffff;
+}
+
+.glass-strong {
+  background: #ffffff;
+}
+
+.bg-gradient-subtle {
+  background: #f6f7f9;
+}
+
+.bg-gradient-header {
+  background: #ffffff;
+}
+
+.bg-gradient-card {
+  background: #ffffff;
+}
+
+/* ── Shadows: border-driven hierarchy, minimal elevation ── */
+.shadow-premium {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.shadow-premium-hover {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+/* ── Step bar running indicator (subtle) ── */
+@keyframes pulse-running {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+.animate-pulse-running {
+  animation: pulse-running 2.4s ease-in-out infinite;
+}
+
+/* ── ROC Progress animation ── */
+@keyframes roc-progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-roc-progress {
+  animation: roc-progress 30s linear forwards;
+}
+
+/* ── Shimmer loading effect ── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e9edf2 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* ── Fade-in animation ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* ── Slide-up animation ── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.25s ease-out forwards;
+}
+
+/* ── Deck slide render: the real slide paints in top-to-bottom behind a scan line ── */
+@keyframes slideRender {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+.animate-slide-render {
+  animation: slideRender 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideScan {
+  from { top: 0%; opacity: 0.9; }
+  to { top: 100%; opacity: 0; }
+}
+
+.animate-slide-scan {
+  animation: slideScan 0.42s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ── Step gate progress (fills while a step runs) ── */
+@keyframes gate-progress {
+  0% { width: 4%; }
+  80% { width: 92%; }
+  100% { width: 100%; }
+}
+
+.animate-gate-progress {
+  animation: gate-progress 2.2s ease-out forwards;
+}
+
+/* ── Focus ring utility ── */
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px var(--accent);
+}
+
+/* ── Card hover: border emphasis, no lift ── */
+.card-hover {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  border-color: #b6c2d4;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+}
+
+/* ── Legacy gradient text → solid corporate navy ── */
+.text-gradient {
+  color: #16345e;
+}
+
+/* ── Indicator dot: static ── */
+.animate-dot-pulse {
+  animation: none;
+}
+
+/* ── Progress bar: no glow ── */
+.progress-glow {
+  box-shadow: none;
+}
